@@ -1,0 +1,601 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+
+}
+
+body {
+  font-family: "";
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #000000;
+}
+
+button {
+  font-family: "Antipasto Pro Extrabold";
+  cursor: pointer;
+}
+
+svg {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+i {
+  color: antiquewhite;
+}
+
+.header-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.header-icons a:hover i {
+  animation: translateY 0.8s alternate;
+  color: #f4be81;
+}
+
+@keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.header-button {
+  border: 1px solid white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  color: white;
+  background-color: transparent;
+  transition: background-color 0.8s;
+}
+
+.header-button:hover {
+  border: 1px solid #f4be81;
+  background-color: #f4be81;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+  width: 250px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .header-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-content i {
+    margin-top: 16px;
+    font-size: 34px;
+  }
+  .header-logo img {
+    width: 160px;
+    margin-top: 46px;
+  }
+  .header-button {
+    display: none;
+  }
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.bg-home {
+  position: relative;
+}
+
+.bg-home:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(247, 2, 2, 0), rgba(0, 0, 0, 0)), url(BackGround\ Funil\ V2.png);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  opacity: 0.4;
+}
+
+.hero {
+  color: white;
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+.hero h1 {
+  text-align: center;
+  line-height: 150%;
+  max-width: 940px;
+  font-size: 46px;
+  margin-bottom: 44px;
+}
+
+.hero .button-contact {
+  padding: 14px 28px;
+  color: white;
+  background-color: #f4be81;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px;
+}
+.hero .button-contact:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .hero{
+    min-height: 60vh;
+
+    h1{
+      font-size: 34px;
+      padding: 0 14px;
+      width: 100%;
+    }
+
+    p{
+      font-size: 14px;
+    }
+  }
+  
+}
+
+@media  screen and(max-width: 480px) {
+  .hero h1{
+    font-size: 24px;
+
+  }
+  .herop{
+    font-size: 24px;
+
+  }
+  .hero p{
+    font-size: 12px;
+  }
+  
+}
+/*# sourceMappingURL=style.css.map */
+
+.about{
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  color: black;
+
+}
+.about h2{
+  color: #f4be81;
+  
+  
+}
+.about-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 24px 104px 84px 86px;
+
+img{
+  max-width: 470px;
+}
+}
+.about-content div{
+  flex: 1;
+}
+.about-description {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 40px;
+}
+
+.about-description h2 {
+  font-size: 40px;
+  margin-bottom: 40px; /* Aumentei o espaçamento entre o título e o texto */
+  color: #f4be81;
+  position: relative; /* Adicionei para posicionar o risco */
+  text-align: left; /* Alinha o título à esquerda */
+}
+.about-description h2 span {
+  display: block; /* Faz com que "História" fique em uma linha separada */
+}
+
+.about-description h2::after {
+  content: "";
+  position: absolute;
+  bottom: -20px; /* Ajustei para alinhar com a parte inferior do título */
+  left: 16.9%; /* Coloquei na metade da largura */
+  transform: translateX(-50%); /* Centralizei horizontalmente */
+  width: 200px; /* Largura do risco */
+  height: 4px; /* Altura do risco */
+  background-color: #f4be81; /* Cor do risco */
+  margin-bottom: -40px;
+  text-align: left;
+}
+
+.about-description p {
+  margin-top: 120px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #696969;
+  margin-bottom: 50px; /* Adicionei espaçamento entre os parágrafos */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+.about-description b {
+  color: #5f5e5e;
+  font-size: 21px;
+}
+
+.botao-container {
+  margin-top: 30px; /* Ajustei o espaçamento acima do botão */
+}
+
+.botao {
+  padding: 12px 24px;
+  background-color: #f4be81;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #e0a241;
+}
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens na horizontal */
+    text-align: center; /* Centraliza o texto */
+    padding: 24px; /* Adiciona um espaçamento interno */
+  }
+
+  .about-description {
+    padding: 24px; /* Adiciona um espaçamento interno */
+  }
+
+  .botao-container {
+    margin-top: 20px; /* Ajusta o espaçamento acima do botão */
+  }
+}
+
+
+.services {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0 0px 0 ;
+  width: 100%;
+
+
+}
+
+.services-content h2{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.services-content p{
+  line-height: 200%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+  
+.pilares {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Adicionado para permitir que os pilares quebrem para uma nova linha, se necessário */
+  width: 90%;
+  gap: 16px;
+  padding: 34px 44px; /* Adicionado para adicionar espaço acima dos pilares */
+  position: relative; /* Adicionado para posicionamento relativo */
+}
+
+.pilares h2,
+.pilares p {
+  position: absolute; /* Posicionamento absoluto */
+  top: 0; /* Coloca as frases no topo do container pai (.pilares) */
+  text-align: center; /* Centraliza o texto */
+  width: 100%; /* Define a largura para preencher o container pai */
+  
+}
+.pilares h2 b{
+  color: #F4BE81;
+}
+
+.pilares h2 {
+  font-size: 40px;
+  margin-top: -20px; /* Ajusta a margem superior do título */
+}
+
+.pilares p {
+  font-size: 40px;
+  margin-top: 40px; /* Ajusta a margem superior do parágrafo */
+}
+
+.pilar {
+  margin-top: 100px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  max-width: 354px;
+}
+
+@media screen and (max-width: 768px) {
+  .pilares {
+    flex-direction: column;
+    align-items: stretch; /* Alonga os itens na direção da coluna */
+  }
+}
+
+.pilar img {
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.pilar img:hover {
+  transform: scale(1.1); /* Aumenta o tamanho da imagem em 10% */
+}
+
+.botao {
+  background-color: #F4BE81; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  border: none; /* Remover borda */
+  padding: 15px 40px; /* Aumenta o espaçamento interno do botão */
+  font-size: 18px; /* Aumenta o tamanho da fonte */
+  cursor: pointer; /* Cursor ao passar por cima */
+  transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+.botao:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+@media screen and (max-width: 768px) {
+  .imagem-centralizada {
+    width: 110%; /* Reduz a largura da imagem para 90% da largura da tela */
+    max-width: 600px; /* Define uma largura máxima para garantir a legibilidade do texto */
+    padding-top: 5%; /* Ajusta o preenchimento superior */
+  }
+}
+
+.box {
+  background-color: #ebebeb;
+
+}
+.servicos {
+  width: 100%;
+  background-color: #011221;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0;
+  color: white;
+   /* Aumenta o tamanho do título */
+  text-align: center; /* Centraliza o texto */
+}
+.servicos h2{
+  font-size: 44px; 
+  margin-top: 24px;
+  
+}
+.servicos p b{
+  color: #F4BE81;
+}
+.servicos p {
+  font-size: 24px;
+  margin-top: 40px; /* Espaçamento entre o título e o parágrafo */
+}
+
+.servicos-img {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 100px; /* Reduz o espaço entre o título e as imagens */
+}
+
+
+.top-row,
+.bottom-row {
+    display: flex;
+    justify-content: space-around; /* Espaço entre as imagens */
+}
+
+.column {
+    flex: 0 0 35%; /* Ajuste conforme necessário */
+    margin: 10px; /* Espaço entre as imagens */
+}
+
+.column img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Redimensionamento máximo da imagem */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.column img:hover {
+  transform: translateY(-8px); /* Move a imagem para cima em 5 pixels */
+}
+@media screen and (max-width: 768px) {
+  .top-row,
+  .bottom-row {
+      flex-direction: column; /* Altera a direção para uma coluna */
+  }
+
+  .column {
+      flex: 1 0 auto; /* Faz com que as colunas ocupem toda a largura disponível */
+      margin: 10px 0; /* Espaçamento entre as colunas */
+  }
+}
+
+.footer {
+  background-color: #011221;
+  color: white;
+  text-align: center;
+  padding: 12px 0; /* Reduzi o preenchimento superior e inferior */
+  width: 100%; /* Define a largura do footer como 100% da largura da tela */
+  position: relative; /* Mantém o footer no fluxo do documento */
+  content: "";
+  display: block;
+
+
+}
+
+.footer-icons {
+  display: flex;
+  gap: 8px;
+  color: white;
+  justify-content: center; /* Alinha os ícones ao centro */
+}
+
+.footer-img {
+  width: 20%; /* Defina a largura da imagem do footer como 20% */
+  margin: auto; /* Centraliza horizontalmente a imagem */
+
+}
+
+
+/*Formulario*/
+.conteudo {
+  background-color: #011221;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  width: 100%; /* Define a largura do footer como 100% da largura da tela */
+  position: relative; /* Mantém o footer no fluxo do documento */
+  content: "";
+  display: block;
+
+}
+
+.contato-container {
+  
+  padding: 10px; /* Adicione um preenchimento para espaçamento */
+  display: flex; /* Use flexbox para centralizar verticalmente o formulário */
+  justify-content: center; /* Centralize horizontalmente o formulário */
+}
+
+.contato {
+  width: 37%; /* Reduzindo a largura do formulário */
+  max-width: 800px;
+  padding: 20px;
+  background-color: #000a14;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  border: 2px solid #F4BE81;
+}
+
+.contato h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.contato p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.contato form {
+  text-align: left;
+}
+
+.contato form label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.contato form input,
+.contato form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 35px;
+  border: 1px solid #F4BE81;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+}
+@media screen and (max-width: 738px) {
+  .contato {
+    width: 100%; /* Reduzindo a largura do formulário em dispositivos móveis */
+  }
+}
+
+.contato form input[type="submit"] {
+  width: auto; /* Torna o botão de enviar do tamanho do conteúdo */
+  padding: 8px 20px; /* Ajusta o preenchimento interno do botão */
+  margin-bottom: 0; /* Remove a margem inferior para evitar espaçamento extra */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+  background-color: #F4BE81; /* Altera a cor de fundo do botão */
+  color: #000; /* Altera a cor do texto do botão */
+  font-size: 16px; /* Altera o tamanho da fonte do botão */
+  cursor: pointer; /* Adiciona um cursor de ponteiro ao botão */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave na mudança de cor */
+}
+
+.contato form input[type="submit"]:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
