@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@font-face {
+  font-family:'antipasto';
+  src: url(../projeto/Branding\ Empresa/);
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +12,7 @@
 }
 
 body {
-  font-family: "";
+  font-family: "poo";
   width: 100%;
   height: 100vh;
   position: relative;
@@ -261,7 +265,7 @@ img{
 
 .about-description p {
   margin-top: 120px;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.6;
   color: #696969;
   margin-bottom: 50px; /* Adicionei espaçamento entre os parágrafos */
@@ -269,7 +273,7 @@ img{
 }
 .about-description b {
   color: #5f5e5e;
-  font-size: 21px;
+  font-size: 24px;
 }
 
 .botao-container {
@@ -314,7 +318,7 @@ img{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 54px 0 0px 0 ;
+  padding: 64px 0 0px 0 ;
   width: 100%;
 
 
@@ -341,7 +345,7 @@ img{
   flex-wrap: wrap; /* Adicionado para permitir que os pilares quebrem para uma nova linha, se necessário */
   width: 90%;
   gap: 16px;
-  padding: 34px 44px; /* Adicionado para adicionar espaço acima dos pilares */
+  padding: 54px 44px; /* Adicionado para adicionar espaço acima dos pilares */
   position: relative; /* Adicionado para posicionamento relativo */
 }
 
@@ -600,5 +604,126 @@ img{
   }
   to {
     transform: scale(1.07);
+  }
+}
+
+/* Estilo para a seção de feedback */
+.feedback {
+  width: 100%;
+  background-color: #011221; /* Cor de fundo preta */
+  color: white; /* Cor do texto branco */
+  padding: 0 0 130px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+}
+
+.feedback b {
+  color: #F4BE81;
+}
+
+.feedback h3 {
+  margin-top: 5%;
+  font-size: 50px; /* Tamanho da fonte do título */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.feedback p {
+  font-size: 25px; /* Tam5anho da fonte do parágrafo */
+  line-height: 1.6; /* Altura da linha */
+}
+.p2{
+  text-align: center; /* Centraliza o texto */
+  margin-top: 3%; /* Espaço acima da div */
+  font-size: 8px; /* Tamanho da fonte */
+}
+
+.feedback2 {
+  width: 20%; /* Reduz o tamanho das imagens para 20% da largura do contêiner */
+  display: flex; /* Exibe as imagens em linha */
+  margin: 0 auto; /* Margem auto horizontalmente para centralizar */
+  align-items: center; /* Alinha as imagens verticalmente ao centro */
+  justify-content: center; /* Centraliza as imagens horizontalmente */
+  margin-top: 5%;
+}
+
+/* Estilo para cada imagem de feedback */
+.feedback2 img {
+  margin-right: 40px; /* Aumenta a margem à direita para criar mais espaço entre as imagens */
+}
+
+.cliente {
+  margin-top: 100px; /* Espaço acima dos clientes */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para cada cliente */
+.cliente {
+  display: block; /* Exibe os elementos em bloco */
+  margin-bottom: 30px; /* Espaço abaixo de cada cliente */
+}
+
+/* Estilo para as imagens de cliente */
+.cliente img {
+  width: 50%; /* Define a largura da imagem */
+  margin-bottom: 0px; /* Espaço abaixo da imagem */
+  margin-top: 0%;
+}
+
+/* Estilo para o texto do cliente */
+.cliente p {
+  font-size: 22px; /* Tamanho da fonte */
+  margin-top: 10px; /* Ajusta a margem superior do texto dos clientes */
+}
+.cliente2 {
+  margin-top: 100px; /* Espaço acima dos clientes */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para cada cliente */
+.cliente2 {
+  display: block; /* Exibe os elementos em bloco */
+  margin-bottom: 0px; /* Espaço abaixo de cada cliente */
+}
+
+/* Estilo para as imagens de cliente */
+.cliente2 img {
+  width: 50%; /* Define a largura da imagem */
+  margin-bottom: 0px; /* Espaço abaixo da imagem */
+  margin-top: 0%;
+}
+
+/* Estilo para o texto do cliente */
+.cliente2 p {
+  font-size: 22px; /* Tamanho da fonte */
+  margin-top: 10px; /* Ajusta a margem superior do texto dos clientes */
+}
+@media screen and (max-width: 768px) {
+  .feedback h3 {
+    font-size: 28px; /* Reduza o tamanho da fonte do título */
+  }
+
+  .feedback p {
+    font-size: 20px; /* Reduza o tamanho da fonte do parágrafo */
+  }
+
+  .feedback2 {
+    width: 100%; /* Largura total */
+    flex-wrap: wrap; /* Permitir que os elementos sejam empilhados em dispositivos menores */
+  }
+
+  .feedback2 img {
+    width: 80%; /* Ajuste a largura da imagem para 80% */
+    margin: 10px auto; /* Centralize as imagens e adicione espaço entre elas */
+  }
+
+  .cliente, .cliente2 {
+    margin-top: 30px; /* Reduza o espaço acima dos clientes */
+  }
+
+  .cliente img, .cliente2 img {
+    width: 100%; /* Ajuste a largura da imagem para 100% */
+  }
+
+  .cliente p, .cliente2 p {
+    font-size: 14px; /* Reduza o tamanho da fonte do texto do cliente */
   }
 }
